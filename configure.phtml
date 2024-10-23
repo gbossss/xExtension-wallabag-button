@@ -5,6 +5,7 @@ $instance_url = FreshRSS_Context::userConf()->attributeString('wallabag_instance
 $client_id = FreshRSS_Context::userConf()->attributeString('wallabag_client_id');
 $client_secret = FreshRSS_Context::userConf()->attributeString('wallabag_client_secret');
 $username = FreshRSS_Context::userConf()->attributeString('wallabag_username');
+$password = FreshRSS_Context::userConf()->attributeString('wallabag_password');
 $access_token = FreshRSS_Context::userConf()->attributeString('wallabag_access_token');
 $refresh_token = FreshRSS_Context::userConf()->attributeString('wallabag_refresh_token');
 $keyboard_shortcut = FreshRSS_Context::userConf()->attributeString('wallabag_keyboard_shortcut');
@@ -42,7 +43,7 @@ $keyboard_shortcut = FreshRSS_Context::userConf()->attributeString('wallabag_key
 
       <label class="group-name" for="password"><?php echo _t('ext.wallabagButton.configure.password'); ?></label>
       <div class="group-controls">
-        <input type="password" name="password" id="password" value="" required>
+        <input type="password" name="password" id="password" value="<?php echo $password; ?>" required>
       </div>
 
       <label class="group-name" for="client_id"><?php echo _t('ext.wallabagButton.configure.client_id'); ?></label>
