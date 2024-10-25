@@ -1,6 +1,5 @@
 parameters:
-	# TODO: Increase rule-level https://phpstan.org/user-guide/rule-levels
-	level: 6
+	level: 6 # TODO: Increase to 9
 	fileExtensions:
 		- php
 		- phtml
@@ -11,7 +10,11 @@ parameters:
 		analyse:
 			- ../FreshRSS
 			- vendor/
+			- fresh_rss_data/
+			- wallabag_data/
 		analyseAndScan:
+			- .github/
+			- .vscode/
 			- .git/
 			- node_modules/
 	checkMissingOverrideMethodAttribute: true
